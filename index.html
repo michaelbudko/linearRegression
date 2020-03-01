@@ -2,12 +2,33 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p class="header">Hey Ma</p>
-    <p class="body-text">How u at</p>
+    <div>
+        <p class="header">Gradient Descent Algorithm</p>
+        <button id="button">Draw Line</button>
+        <p id="theta0">Theta0 </p>
+        <p id="theta1">Theta1</p>
+    </div>
+    <!-- <p class="body-text">How u at</p> -->
+    <canvas id="myCanvas" width= 400px height=400px></canvas>
+    <table id = "myTable" style="width:20%">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+    </table>
+
 </body>
 </html>
