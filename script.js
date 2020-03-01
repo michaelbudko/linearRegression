@@ -3,6 +3,8 @@ $(document).ready(function(){
     alpha0 = 0.51;
     theta0 = 0;
     theta1 = 1;
+    var imageData;
+    // var ImageData = ctx.getImageData(0,0,400,400);
     n = 0;
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
@@ -26,11 +28,28 @@ $(document).ready(function(){
         // alert(xList);
     } 
     function drawCircle(canvas, event) {
+        ctx.fillStyle = "#7FFFD4";
         ctx.beginPath();
-        ctx.arc(x - 2.5, y - 2.5, 5, 0, 2 * Math.PI);
-        ctx.stroke();
+        ctx.arc(x , y , 5, 0, 2 * Math.PI);
+        // ctx.stroke();
+        ctx.fill();
+    }
+    function drawCircle2(x, y) {
+        // alert("drawing circle");
+        ctx.fillStyle = "#7FFFD4";
+        ctx.moveTo(x, 400 - y);
+        // alert("moved to " + x + "," + y);
+        ctx.beginPath();
+        ctx.arc(x , 400 -y, 5, 0, 2 * Math.PI);
+        // alert("arc works");
+        // ctx.stroke();
+        ctx.fill();
+        // alert("'drew circle'");
     }
     function drawLine(){
+        redrawObjects();
+        // ctx.putImageData(imageData, 0, 0);
+        // alert(imageData);
         ctx.moveTo(0, 400 - theta0);
         var endY;
         var endX;
@@ -50,6 +69,15 @@ $(document).ready(function(){
         $("#theta0").html(theta0);
         $("#theta1").html(theta1);
         // alert(endX + ", " + endY);
+    }
+    function redrawObjects(){
+        ctx.clearRect(0,0,400,400);
+        // alert("recatngle cleared");
+        for (i = 0; i < n; i++) {
+            drawCircle2(xList[i], yList[i]);
+            // alert("loop working");
+        }
+        // alert("redrew objects");
     }
     function updateTheta() {
         part0 = 0;
@@ -76,10 +104,63 @@ $(document).ready(function(){
     { 
         getMousePosition(canvasElem, e); 
         drawCircle(canvasElem,e);
+        // imageData = ctx.getImageData(0,0,400,400);
     });
     $("#button").click(function(){
-        drawLine();
+        drawLines()
     });
+    function drawLines() {
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+        drawLine();
+    }
     $("#myCanvas").click(function(){
         // alert("hey");
         var name = x;

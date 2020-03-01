@@ -34,3 +34,7 @@ table, th, td {
     border-collapse: collapse;
     padding: 15px;
   }
+
+  p {
+      margin-top: 0;
+  }
