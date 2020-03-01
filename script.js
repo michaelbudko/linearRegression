@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    alpha1 = .00001;
+    alpha1 = .000001;
     alpha0 = 0.51;
-    theta0 = 200;
+    theta0 = 0;
     theta1 = 1;
     n = 0;
     canvas = document.getElementById("myCanvas");
